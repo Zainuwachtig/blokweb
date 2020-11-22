@@ -1,5 +1,119 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/*Font Awesome werkt niet als ik hem hierboven erin zet*/
+* {
+    font-family: "Helvetica Neue";
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    width: 180px;
+    margin: 0.9em;
+}
+
+.articlesort {
+    display: flex;
+}
+
+.articlesort li {
+    list-style-type: none;
+    text-decoration: none;   
+    /*justify-content: space-around; werkt niet?*/
+    flex-grow: 1;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+article img {
+    width: 345px;
+    margin-right: 1em;
+}
+
+article h2 {
+    /*Deze klopt ook nog niet helemaal*/
+   font-size:calc(12px + 1vw);
+}
+
+article p, article time {
+    color: grey;
+    margin-top: 0;
+}
+
+.artikelcategorie {
+    font-weight: 600;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article div:first-of-type {
+    display: flex;
+    flex-grow: 1;
+}
+
+.aantalbekeken {
+    align-items: center;
+}
+
+.aantalgereageerd {
+    display: flex;
+    align-items: center;
+}
+
+/*Artikel Sheck Wes*/
+
+.sheckwesartikel h1 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.sheckwesartikel p:first-of-type {
+    text-align: center;
+    color: grey;
+    font-size: 1.1em;
+    margin: 0 1em 0 1em;
+}
+
+/*De auteur van het artikel*/
+.sheckwesartikel p:nth-of-type(2) {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+}
+
+.artikeltekst {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.artikeltags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artikeltag {
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 0.3em;
+    font-size: 0.8em;
 }
 
