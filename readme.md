@@ -63,7 +63,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Breakdownschets (week 1)
 
 
-<img src="images/breakdown.png" width:460px; alt="De homepagina van de website">
+![Tux, the Linux mascot](/images/breakdown.png)
 
 
 ## Intake (week 1)
