@@ -21,15 +21,61 @@ header img {
     margin: 0.9em;
 }
 
-.articlesort {
+.voorpagina {
+    position: relative;
+}
+
+/*Hij blijft een kleine padding of iets hebben en dat krijg ik niet weg.*/
+.voorpagina img {
+    width: 100vw;
+}
+
+.voorpagina h2 {
+    position: absolute;
+    bottom: -1em;
+    left: calc(50% - 8em);
+    background-color: white;
+    width: 320px;
+    padding: 0.55em;
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.voorpagina-klein img {
+    width: 95%;
+}
+
+.voorpagina-klein h2 {
+    font-size: 1em;
+    font-weight: 500;
+    width: 179.5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+main div {
     display: flex;
+    margin-top: 3em;
+}
+
+.articlesort {
+    width: 100vw;
+    display: flex;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .articlesort li {
     list-style-type: none;
-    text-decoration: none;   
+    text-decoration: none;
     /*justify-content: space-around; werkt niet?*/
     flex-grow: 1;
+    line-height: 3em;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 a {
@@ -39,21 +85,26 @@ a {
 
 article img {
     width: 345px;
-    margin-right: 1em;
 }
 
 article h2 {
     /*Deze klopt ook nog niet helemaal*/
-   font-size:calc(12px + 1vw);
+    font-size: calc(1em + 1vw);
 }
 
-article p, article time {
+article p,
+article time {
     color: grey;
     margin-top: 0;
 }
 
-.artikelcategorie {
+.artikeldata p:first-child {
     font-weight: 600;
+}
+
+.artikeldata > p:nth-of-type(1),
+time {
+    font-size: 12px;
 }
 
 article {
@@ -61,22 +112,35 @@ article {
     flex-wrap: wrap;
 }
 
-article div:first-of-type {
+.artikeldata {
+    width: 100%;
     display: flex;
-    flex-grow: 1;
+    justify-content: space-between;
 }
 
-.aantalbekeken {
-    align-items: center;
+article div:first-of-type {
+    display: flex;
 }
 
 .aantalgereageerd {
+    /*Display: flex zodat ze naast elkaar staan.*/
     display: flex;
-    align-items: center;
+}
+
+.fa-hotjar,
+.fa-comment {
+    margin-right: 0.5em;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    width: 345px;
+    margin: 18px 0 25px 0;
 }
 
 /*Artikel Sheck Wes*/
-
 .sheckwesartikel h1 {
     text-align: center;
     font-size: 1.6em;
@@ -116,4 +180,3 @@ article div:first-of-type {
     margin: 0.3em;
     font-size: 0.8em;
 }
-

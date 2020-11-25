@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>HYPEBEAST</title>
+    <link rel="icon" sizes="14x48" href="images/favicon-48x48.png">
 
     <script src="https://kit.fontawesome.com/7cdc8f4e8c.js" crossorigin="anonymous"></script>
     <link href="styles/style.css" rel="stylesheet">
@@ -16,11 +17,34 @@
 
     <header>
         <i class="fas fa-bars fa-2x"></i>
-        <img src="images/hypebeastlogosvg.svg" alt="">
+        <a href="index.html"> <img src="images/hypebeastlogosvg.svg" alt=""></a>
         <i class="fas fa-search fa-2x"></i>
     </header>
 
     <main>
+        <article class="voorpagina">
+            <!--img over hele breedte lukt niet-->
+            <img src="images/noah.jpg" alt="">
+            <h2>NOAH's adidas Originals Gazelle Collaboration Is for the OGs</h2>
+        </article>
+
+        <!--Div zodat ik met flexbox naast elkaar kan zetten.-->
+        <div>
+            <article class="voorpagina-klein">
+                <img src="images/aj4.jpg" alt="">
+                <h2>Air Jordan 4 "Fire Red" Cranks up the Heat for Black Friday Week's Best Footwear Drops</h2>
+            </article>
+
+            <article class="voorpagina-klein">
+                <img src="images/supreme.jpg" alt="">
+                <h2>Christie's Supreme "The Box Logo Collection" Is Expected To Sell for $2M USD</h2>
+            </article>
+        </div>
+
+        <h3>Most Hyped</h3>
+        <hr>
+       
+       
         <ul class="articlesort">
             <li><a href="">Latest</a></li>
             <li><a href="">Rising</a></li>
@@ -29,24 +53,45 @@
         </ul>
 
         <article>
-            <img src="images/sheckwes.jpg" alt="">
+            <a href="artikel.html"><img src="images/sheckwes.jpg" alt=""></a>
             <h2>Sheck Wes Releases New Track, "2020 DRAFT" #BEENBALLIN (UPDATE)</h2>
             <p>After revealing he is eligible for the 2020 NBA Draft.</p>
-            <div>
-               <p class="artikelcategorie">Music</p>
+            <div class="artikeldata">
+                <p>Music</p>
                 <time datetime="2020-11-19">Nov, 19 2020</time>
                 <div class="aantalbekeken">
-                    <i class="fab fa-hotjar"></i>
+                    <i class="fab fa-hotjar fa-sm"></i>
                     <p>23.9k</p>
                 </div>
                 <div class="aantalgereageerd">
-                    <i class="fas fa-comment"></i>
-                    <p>7 comments</p>
+                    <i class="fas fa-comment fa-sm"></i>
+                    <p>7</p>
                 </div>
             </div>
         </article>
-        
+
         <hr>
+
+        <article>
+            <a href=""><img src="images/mask.jpg" alt=""></a>
+            <h2>This Transparent Mask Is Designed With Anti-Fog Technology</h2>
+            <p>Making communication more human, natural and accessible.</p>
+            <div class="artikeldata">
+                <p>Fashion</p>
+                <time datetime="2020-11-19">Nov, 18 2020</time>
+                <div class="aantalbekeken">
+                    <i class="fab fa-hotjar fa-sm"></i>
+                    <p>10.4k</p>
+                </div>
+                <div class="aantalgereageerd">
+                    <i class="fas fa-comment fa-sm"></i>
+                    <p>10</p>
+                </div>
+            </div>
+        </article>
+
+        <hr>
+
     </main>
 
     <script src="scripts/script.js"></script>
