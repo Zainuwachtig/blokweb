@@ -63,7 +63,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Breakdownschets (week 1)
 
 
-![alt text](/images/breakdownschets.png)
+<img src="images/breakdown.png"; alt="De homepagina van de website">
 
 
 ## Intake (week 1)
