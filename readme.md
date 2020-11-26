@@ -42,7 +42,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s):**
 
-![De pagina van het artikel, moet ik hier ook de comment section namaken net als in de echte site?](/images/proces1foto1.png)
+![De pagina van het artikel, moet ik hier ook de comment section namaken net als in de echte site?](./images/proces1foto1.png)
 ![De homepage, ik moet alleen nog de most hyped.](/images/proces1foto2.png)
 ![De homepage, ik moet alleen nog met flexbox alles netjes maken.](/images/proces1foto3.png)
 ![De homepage, ook hier met flexbox nog netjes maken.](/images/proces1foto4.png)
