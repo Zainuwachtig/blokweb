@@ -14,11 +14,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #eee;
 }
 
 header img {
     width: 180px;
     margin: 0.9em;
+}
+
+
+/*Header groot*/
+header li {
+    list-style-type: none;
+    padding: 0 1em 0 1em;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 72em;
+    padding: 0;
+}
+
+header ul div:nth-of-type(1) {
+    display: flex;
+
 }
 
 .voorpagina {
@@ -49,12 +69,34 @@ header img {
 .voorpagina-klein h2 {
     font-size: 1em;
     font-weight: 500;
-    width: 179.5px;
+    width: 100%;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
+/*Most Hyped*/
+.mosthyped img {
+    width: 3.8em;
+    margin-right: 1em;
+}
+
+.mosthyped h2 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.mosthyped article {
+    flex-wrap: nowrap;
+}
+
 
 main div {
     display: flex;
@@ -64,18 +106,17 @@ main div {
 .articlesort {
     width: 100vw;
     display: flex;
+    justify-content: space-around;
     padding-left: 0;
-    margin-left: 0;
+    margin: 1em 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .articlesort li {
     list-style-type: none;
     text-decoration: none;
-    /*justify-content: space-around; werkt niet?*/
-    flex-grow: 1;
     line-height: 3em;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
 
 a {
@@ -88,8 +129,7 @@ article img {
 }
 
 article h2 {
-    /*Deze klopt ook nog niet helemaal*/
-    font-size: calc(1em + 1vw);
+    font-size: 1.2em;
 }
 
 article p,
@@ -127,6 +167,11 @@ article div:first-of-type {
     display: flex;
 }
 
+.aantalbekeken,
+.aantalgereageerd {
+    margin-top: 0;
+}
+
 .fa-hotjar,
 .fa-comment {
     margin-right: 0.5em;
@@ -137,7 +182,7 @@ hr {
     height: 1px;
     background-color: #eee;
     width: 345px;
-    margin: 18px 0 25px 0;
+    margin: 10px 0 16px 0;
 }
 
 /*Artikel Sheck Wes*/
@@ -179,4 +224,16 @@ hr {
     padding: 5px;
     margin: 0.3em;
     font-size: 0.8em;
+}
+
+@media (min-width:60em) {
+    article img {
+        width: 400px;
+    }
+    
+    article h2 {
+    font-size: 1.6em;
+        width: 400px;
+        max-height: 170px;
+}
 }
