@@ -14,108 +14,114 @@
 </head>
 
 <body>
-
     <header>
         <i class="fas fa-bars fa-2x"></i>
-        <a href="index.html"> <img src="images/hypebeastlogosvg.svg" alt=""></a>
+        <a href="index.html"> <img src="images/hypebeastlogosvg.svg" alt="Hypebeast logo"></a>
         <i class="fas fa-search fa-2x"></i>
     </header>
 
     <main>
+        <!--Ik probeerde met een div het allemaal recht te trekken maar het ging alleen nog maar verder de mist in.-->
+        <!--        <div id="voorpaginavolledig">-->
         <article class="voorpagina">
             <!--img over hele breedte lukt niet-->
-            <img src="images/noah.jpg" alt="">
+            <img src="images/noah.jpg" alt="Man wearing the Adidas x Noah Gazelle outside.">
             <h2>NOAH's adidas Originals Gazelle Collaboration Is for the OGs</h2>
         </article>
 
         <!--Div zodat ik met flexbox naast elkaar kan zetten.-->
         <div>
             <article class="voorpagina-klein">
-                <img src="images/aj4.jpg" alt="">
+                <img src="images/aj4.jpg" alt="Air Jordan 4 Fire Red outside.">
                 <h2>Air Jordan 4 "Fire Red" Cranks up the Heat for Black Friday Week's Best Footwear Drops</h2>
             </article>
 
             <article class="voorpagina-klein">
-                <img src="images/supreme.jpg" alt="">
+                <img src="images/supreme.jpg" alt="A collection of Supreme box logo's.">
                 <h2>Christie's Supreme "The Box Logo Collection" Is Expected To Sell for $2M USD</h2>
             </article>
         </div>
 
-
         <section class="mosthyped">
-            <h3>Most Hyped</h3>
+            <h3 class="show">Most Hyped</h3>
             <hr>
             <article>
-                <img src="images/weeknd.jpg" alt="">
+                <img src="images/weeknd.jpg" alt="The Weeknd with sunglasses outside.">
                 <a href="">
                     <h2>The Weeknd Responds to 2021 Grammys Snub</h2>
                 </a>
             </article>
             <hr>
             <article>
-                <img src="images/dave.jpg" alt="">
+                <img src="images/dave.jpg" alt="Dave Chappelle with a mic in his hands.">
                 <a href="">
                     <h2>Netflix Has Removed 'Chappelle's Show' At Dave Chappelle's Request</h2>
                 </a>
             </article>
             <hr>
             <article>
-                <img src="images/dunk.jpg" alt="">
+                <img src="images/dunk.jpg" alt="The Nike SB Dunk low in collaboration with Frame Skate.">
                 <a href="">
                     <h2>Official Look at the Frame Skate x Nike SB Dunk Low "Habibi"</h2>
                 </a>
             </article>
         </section>
+        <!--        </div>-->
 
 
-        
         <ul class="articlesort">
             <li><a href="">Latest</a></li>
             <li><a href="">Rising</a></li>
             <li><a href="">Popular</a></li>
             <li><a href="">Commented</a></li>
         </ul>
+        <section class="whattoread">
+            <article>
+                <a href="artikel.html"><img src="images/sheckwes.jpg" alt="The cover for Sheck Wes his single BEENBALLIN"></a>
+                <aside>
+                    <p id="sectionartikel" class="dontshow">Music</p>
+                    <h2>Sheck Wes Releases New Track, "2020 DRAFT" #BEENBALLIN (UPDATE)</h2>
+                    <p>After revealing he is eligible for the 2020 NBA Draft.</p>
+                    <div class="artikeldata">
+                        <p>Music</p>
+                        <time datetime="2020-11-19">Nov, 19 2020</time>
+                        <div class="aantalbekeken">
+                            <i class="fab fa-hotjar fa-sm"></i>
+                            <p>23.9k</p>
+                        </div>
+                        <div class="aantalgereageerd">
+                            <i class="fas fa-comment fa-sm"></i>
+                            <p>7</p>
+                        </div>
+                    </div>
+                </aside>
+            </article>
 
-        <article>
-            <a href="artikel.html"><img src="images/sheckwes.jpg" alt=""></a>
-            <h2>Sheck Wes Releases New Track, "2020 DRAFT" #BEENBALLIN (UPDATE)</h2>
-            <p>After revealing he is eligible for the 2020 NBA Draft.</p>
-            <div class="artikeldata">
-                <p>Music</p>
-                <time datetime="2020-11-19">Nov, 19 2020</time>
-                <div class="aantalbekeken">
-                    <i class="fab fa-hotjar fa-sm"></i>
-                    <p>23.9k</p>
-                </div>
-                <div class="aantalgereageerd">
-                    <i class="fas fa-comment fa-sm"></i>
-                    <p>7</p>
-                </div>
-            </div>
-        </article>
+            <hr>
 
-        <hr>
+            <article>
+                <a href=""><img src="images/mask.jpg" alt="Woman wearing a anti-fog mask"></a>
+                <aside>
+                   <p id="sectionartikel" class="dontshow">Fashion</p>
+                    <h2>This Transparent Mask Is Designed With Anti-Fog Technology</h2>
+                    <p>Making communication more human, natural and accessible.</p>
+                    <div class="artikeldata">
+                        <p>Fashion</p>
+                        <time datetime="2020-11-19">Nov, 18 2020</time>
+                        <div class="aantalbekeken">
+                            <i class="fab fa-hotjar fa-sm"></i>
+                            <p>10.4k</p>
+                        </div>
+                        <div class="aantalgereageerd">
+                            <i class="fas fa-comment fa-sm"></i>
+                            <p>10</p>
+                        </div>
+                    </div>
+                </aside>
+            </article>
 
-        <article>
-            <a href=""><img src="images/mask.jpg" alt=""></a>
-            <h2>This Transparent Mask Is Designed With Anti-Fog Technology</h2>
-            <p>Making communication more human, natural and accessible.</p>
-            <div class="artikeldata">
-                <p>Fashion</p>
-                <time datetime="2020-11-19">Nov, 18 2020</time>
-                <div class="aantalbekeken">
-                    <i class="fab fa-hotjar fa-sm"></i>
-                    <p>10.4k</p>
-                </div>
-                <div class="aantalgereageerd">
-                    <i class="fas fa-comment fa-sm"></i>
-                    <p>10</p>
-                </div>
-            </div>
-        </article>
-
-        <hr>
-
+            <hr>
+        </section>
     </main>
 
     <script src="scripts/script.js"></script>
