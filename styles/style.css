@@ -3,434 +3,380 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue", helvetica;
 }
 
-/*Font Awesome werkt niet als ik hem hierboven erin zet*/
-* {
-    font-family: "Helvetica Neue";
+h1 {
+    font-size: 1.6em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0.8em 0;
 }
 
+h3 {
+    font-weight: 500;
+}
+
+h4,
+h5 {
+    margin: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Header*/
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
+    margin: 1em;
 }
 
 header img {
-    width: 160px;
+    width: 10em;
 }
 
-#store {
-    padding-left: 0.6em;
-    border-left: solid 1px #DDDDDD;
-    margin-left: -0.7em;
+header a {
+    color: black;
+    font-size: 0.8em;
 }
 
-/*Navbar lukt niet*/
-.navbar {
+header nav {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: pink;
+    transform:translatex(-100%);
 }
 
-/*Header groot*/
-header li {
-    list-style-type: none;
-    padding: 0 1em 0 1em;
+.toonmenu {
+      transform:translatex(0);
 }
 
-header ul {
+/*Voor de bovenkant van de header kleiner dan 61em*/
+header nav div:first-of-type {
     display: flex;
     justify-content: space-between;
-    width: 72em;
-    padding: 0;
+    padding: 1em;
+    border-bottom: 1px solid #eee;
 }
 
-header ul div:nth-of-type(1) {
-    display: flex;
+header nav a {
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
 
+header nav li {
+    padding: 1em;
+}
+
+.socialmediaicons {
+    margin-left: 1em;
+}
+
+.socialmediaicons img {
+    margin-right: 1em;
+}
+
+input[type=text] {
+    border: none;
+    padding: 1em;
+    width: 70%;
+}
+
+input[type=submit] {
+    border: none;
+    padding: 1em;
+    background-color: #051E4B;
+    color: white;
+}
+
+/*Icons in de nav*/
+header nav div img:nth-last-of-type(1),
+header nav div img:nth-last-of-type(3), .socialmediaicons img {
+    width: 1.5em;
+}
+
+/*Ik heb hem als span, maar toch doet die als block element*/
+.iconsheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.iconsheader img {
+    width: 1.5em;
+}
+
+.artikelheading h2 {
+    color: #888888;
+    font-weight: 400;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.artikelheading a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    /*Block, omdat anders text-align niet werkt.*/
+    display: block;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+.artikelheading a span {
+    font-weight: 500;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    margin: 1em;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.metadata {
+    display: flex;
+    font-size: 0.8em;
+    color: #888888;
+}
+
+.artikeltekst p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 1em;
+    padding: 0 1em;
+}
+
+.artikeltekst a {
+    color: #00469B;
+    text-decoration: none;
+}
+
+/*Share Article*/
+.sharearticle {
+    display: flex;
+    margin: 1em;
+    align-items: center;
+}
+
+.sharearticle p {
+    margin-right: 1em;
+}
+
+.articletags {
+    margin: 1em;
+}
+
+.articletags a {
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.articletags a:hover {
+    background-color: black;
+    color: white;
+}
+
+/*You May Also Like*/
+.youmayalsolike {
+    display: flex;
+    overflow-x: auto;
+}
+
+.youmayalsolike article {
+    margin: 0.5em;
+}
+
+.youmayalsolike img {
+    width: 15em;
+}
+
+.youmayalsolike h3 {
+    font-size: 1em;
+}
+
+.youmayalsolike h3:hover {
+    opacity: 0.7;
+}
+
+/*What To Read Next*/
+.whattoreadnext article {
+    margin: 1em;
+}
+
+.whattoreadnext article img {
+    width: 100%;
+}
+
+.whattoreadnext p,
+.whattoreadnext a,
+time {
+    color: #888888;
+    text-decoration: none;
+}
+
+.whattoreadnext article p:last-child {
+    background-color: pink;
+    display: inline;
+    /*    Text-align, margin-right:auto werkt niet*/
+    text-align: right;
+}
+
+/*Artikel*/
+.rechterzijde {
+    font-size: 0.9em;
+}
+
+/*Homepage*/
+.voorpagina img {
+    width: 100%;
 }
 
 .voorpagina {
     position: relative;
 }
 
-/*Hij blijft een kleine padding of iets hebben en dat krijg ik niet weg.*/
-.voorpagina img {
-    width: 100vw;
-}
-
-.voorpagina h2 {
+.voorpagina h3 {
     position: absolute;
     bottom: -1em;
-    left: calc(50% - 8em);
-    background-color: white;
-    width: 320px;
-    padding: 0.55em;
-    margin: 0;
+    left: 50%;
+    font-size: 1.3em;
+    background-color: pink;
+    width: 95%;
     text-align: center;
-    font-weight: 500;
+    padding: 1em 0;
+    /*https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element*/
+    transform: translate(-50%, -50%);
 }
 
-.voorpagina-klein img {
+
+.voorpaginaonder {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.voorpaginaonder article {
+    width: 50%;
+    text-align: center;
+}
+
+.voorpaginaonder article img {
     width: 95%;
 }
 
-.voorpagina-klein h2 {
-    font-size: 1em;
-    font-weight: 500;
-    width: 100%;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.voorpaginaonder article h3 {
+    font-size: 0.9em;
+    text-align: center;
 }
-
 
 /*Most Hyped*/
-.mosthyped img {
-    width: 3.8em;
-    margin-right: 1em;
-}
 
-.mosthyped h2 {
-    font-size: 14px;
-    margin: 0;
-    font-weight: 500;
-}
-
-h3 {
-    font-weight: 500;
-    font-size: 1.3em;
-    padding-left: 1em;
+.mosthyped {
+    margin: 1em;
 }
 
 .mosthyped article {
-    flex-wrap: nowrap;
-}
-
-main div {
     display: flex;
-    margin-top: 3em;
+    font-size: 0.8em;
+    margin-bottom: 1em;
 }
 
-.articlesort {
-    width: 100vw;
+.mosthyped img {
+    width: 6.5em;
+    margin-right: 0.8em;
+}
+
+/*Brand Ranking*/
+ol {
+    margin: 1em;
+    list-style: none;
+}
+
+/*Brand*/
+ol li {
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/*Position Brand*/
+ol li span {
+    color: #CCCCCC;
+    font-size: 1.7em;
+    margin-right: 1em;
+}
+
+/*Sorting*/
+.sorting {
     display: flex;
     justify-content: space-around;
-    padding-left: 0;
-    margin: 1em 0;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
 
-.articlesort li {
-    list-style-type: none;
-    text-decoration: none;
-    line-height: 3em;
-}
-
-a {
-    text-decoration: none;
+.sorting a {
     color: black;
+    text-decoration: none;
+    padding: 1em 1em;
 }
 
-article img {
-    width: 100%;
-    /*    max-width: 700px;*/
-    padding: 1em;
-}
-
-article h2 {
-    font-size: 1.2em;
-    padding: 0 1em;
-}
-
-article p,
-article time {
-    color: grey;
-    margin-top: 0;
-}
-
-.artikeldata p:first-child {
-    font-weight: 600;
-    font-size: 12px;
+.sorting a:hover {
+    border-bottom: 4px solid black;
 }
 
 
-.artikeldata > p:nth-of-type(1),
-time {
-    font-size: 12px;
-}
-
-article {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.artikeldata {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-article div:first-of-type {
-    display: flex;
-}
-
-.aantalgereageerd {
-    /*Display: flex zodat ze naast elkaar staan.*/
-    display: flex;
-}
-
-.aantalbekeken,
-.aantalgereageerd {
-    margin-top: 0;
-    font-size: 12px;
-    color: gray;
-}
-
-.fa-hotjar,
-.fa-comment {
-    margin-right: 0.5em;
-}
-
-hr {
-    border: none;
-    height: 1px;
-    background-color: #eee;
-    width: 345px;
-    margin: 10px 0 16px 0;
-}
-
-/*Artikel Sheck Wes*/
-
-blockquote {
-    font-weight: 600;
-    font-size: 19.2px;
-    border-left: 5px solid black;
-    padding-left: 1em;
-    margin: 0;
-}
 
 
-.spotify {
-    width: 100%;
-    height: 380;
-    max-width: 60em;
-}
+@media (min-width:61em) {
 
-.itunes {
-    height: 150;
-    width: 100%;
-    max-width: 60em;
-    overflow: hidden;
-    background: transparent;
-}
-
-.sheckwesartikel h1 {
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: 500;
-}
-
-.sheckwesartikel p:first-of-type {
-    text-align: center;
-    color: grey;
-    font-size: 1.1em;
-
-}
-
-/*De auteur van het artikel*/
-.sheckwesartikel p:nth-of-type(2) {
-    font-size: 0.8em;
-    display: flex;
-    justify-content: center;
-}
-
-.artikeltekst {
-    font-size: 1.1em;
-    line-height: 1.6;
-    padding: 0 1em;
-}
-
-.artikeltags {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 1em;
-}
-
-.artikeltag {
-    text-transform: uppercase;
-    font-weight: 500;
-    border: 1px solid black;
-    border-radius: 2px;
-    padding: 5px;
-    margin: 0.3em;
-    font-size: 0.8em;
-}
-
-.artikeltag:hover {
-    background-color: black;
-    color: white;
-}
-
-#sectionartikel {
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.youmaylike {
-    display: flex;
-    flex-direction: column;
-}
-
-.dontshow {
-    opacity: 0;
-}
-
-.show {
-    opacity: 1;
-}
-
-@media (min-width:60em) {
-    article img {
-        width: 400px;
+    /*Om de artikelen in een rij ipv column*/
+    .voorpaginaflexbox {
+        display: flex;
     }
 
-    .artikeltekst,
-    blockquote {
-        width: calc(420px + 5vw);
-        margin: 1em auto;
-
+    /*Voorpagina, middelste artikel*/
+    .voorpagina {
+        order: 2;
     }
 
-    .spotify {
-        width: calc(420px + 5vw);
-        height: 380;
-        max-width: 60em;
-        margin: auto;
+    /*2 kleinere artikelen, rechts.*/
+    .voorpaginaonder {
+        order: 3;
     }
 
-    .itunes {
-        height: 150;
-        width: calc(420px + 5vw);
-        margin: auto;
-        max-width: 60em;
-        overflow: hidden;
-        background: transparent;
+    .voorpaginaonder {
+        flex-direction: column;
     }
 
-
-    article h2 {
-        font-size: 1.6em;
-        width: 400px;
-        max-height: 170px;
-        padding: 0;
+    /*Most Hyped, links*/
+    .mosthyped {
+        order: 1;
     }
 
-    .youmaylike {
-        flex-direction: row;
+    .mosthyped img {
+        width: 10%;
     }
 
-    .youmaylike article {
-        width: calc(11em + 10vw);
-        margin: 1em;
-    }
-
-    .youmaylike img {
-        width: calc(11em + 10vw);
-        padding: 0;
-
-    }
-
-    .youmaylike h2 {
-        font-size: 1em;
-    }
-
-    .whattoread h2 {
-        font-size: 1.5em;
-    }
-
-    #sectionartikel {
-        color: #00469b;
-        text-align: left;
-    }
-
-    .dontshow {
-        opacity: 1;
-    }
-
-    .show {
+    #mosthypedtitel {
         display: none;
     }
 
-    .sheckwesartikel p:nth-of-type(2) {
-        justify-content: flex-start;
-        font-size: 18px;
-    }
-
-    .voorpagina img {
-        width: 26.25em;
-    }
-
-    .voorpagina {
-        position: static;
-        display: flex;
-        flex-direction: column;
-    }
-
-    article aside {
-        margin: 1em;
-    }
-
-    .voorpagina h2 {
-        position: static;
-        margin: 0;
-        text-align: left;
-        font-weight: 500;
-    }
-
-    #voorpaginavolledig {
-        display: flex;
-    }
-
-    #voorpaginavolledig div {
-        display: flex;
-        flex-direction: column;
-        margin-left: 1em;
-        margin-top: 0;
-    }
-
-    .mosthyped {
-        order: -1;
-    }
-
-    .mosthyped article {
-        width: 10em
-    }
 
 
-    .voorpagina-klein {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .voorpagina-klein img {
-        width: 13em;
-    }
-
-    .voorpagina-klein h2 {
-        font-size: 1.2em;
-        font-weight: 500;
-        width: 100%;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        width: 13em;
-    }
 
 
 }

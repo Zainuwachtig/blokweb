@@ -3,126 +3,117 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Zain">
+    <meta name="author" content="jouw naam">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>HYPEBEAST</title>
-    <link rel="icon" sizes="14x48" href="images/favicon-48x48.png">
+    <title>HYPEBEAST.</title>
 
     <script src="https://kit.fontawesome.com/7cdc8f4e8c.js" crossorigin="anonymous"></script>
     <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <i class="fas fa-bars fa-2x"></i>
-        <a href="index.html"> <img src="images/hypebeastlogosvg.svg" alt="Hypebeast logo"></a>
-        <i class="fas fa-search fa-2x"></i>
-    </header>
+    <header></header>
 
-    <main>
-        <!--Ik probeerde met een div het allemaal recht te trekken maar het ging alleen nog maar verder de mist in.-->
-        <!--        <div id="voorpaginavolledig">-->
-        <article class="voorpagina">
-            <!--img over hele breedte lukt niet-->
-            <img src="images/noah.jpg" alt="Man wearing the Adidas x Noah Gazelle outside.">
-            <h2>NOAH's adidas Originals Gazelle Collaboration Is for the OGs</h2>
-        </article>
-
-        <!--Div zodat ik met flexbox naast elkaar kan zetten.-->
-        <div>
-            <article class="voorpagina-klein">
-                <img src="images/aj4.jpg" alt="Air Jordan 4 Fire Red outside.">
-                <h2>Air Jordan 4 "Fire Red" Cranks up the Heat for Black Friday Week's Best Footwear Drops</h2>
+    <main class="index">
+        <div class="voorpaginaflexbox">
+            <!--Voorpagina artikel - op groot scherm moet deze in het midden bovenaan.-->
+            <article class="voorpagina">
+                <img src="images/jordan9.jpg" alt="">
+                <h3>Official Look at the Air Jordan 9 "University Gold"</h3>
             </article>
 
-            <article class="voorpagina-klein">
-                <img src="images/supreme.jpg" alt="A collection of Supreme box logo's.">
-                <h2>Christie's Supreme "The Box Logo Collection" Is Expected To Sell for $2M USD</h2>
-            </article>
+            <!--Voorpagina artikel onder de grote voorpagina artikel, moet bij groot scherm aan de rechterkant.-->
+
+            <div class="voorpaginaonder">
+                <article>
+                    <img src="images/ma-1.jpg" alt="">
+                    <h3>FOSTEX GARMENTS Reissues Signature MA-1 Bomber Jacket in Reproduction Vintage Wash</h3>
+                </article>
+
+                <article>
+                    <img src="images/fengchenwang.jpg" alt="">
+                    <h3>Sole Mates: Feng Chen Wang and the Air Jordan 1</h3>
+                </article>
+            </div>
+
+
+            <!--Most hyped, moet bij groot scherm aan de linkerkant.-->
+            <!--Most hyped titel verdwijnt bij groot scherm-->
+            <h4 id="mosthypedtitel">Most Hyped</h4>
+            <section class="mosthyped">
+                <article>
+                    <img src="images/motorcycle.jpg" alt="">
+                    <h3>Sondors Debuts Its Streamline Metacycle Electric Motorcycle</h3>
+                </article>
+
+                <article>
+                    <img src="images/supremesale.jpg" alt="">
+                    <h3>Supreme FW20 Online Sale Is Now On</h3>
+                </article>
+
+                <article>
+                    <img src="images/poloclot.jpg" alt="">
+                    <h3>Detailed Look at the Culture-Bridging CLOT x Polo Ralph Lauren Collection</h3>
+                </article>
+            </section>
+        </div>
+        <!--Brand ranking-->
+        <h4>Brand Ranking</h4>
+        <ol>
+            <li><span>1</span>Nike</li>
+            <li><span>2</span>adidas</li>
+            <li><span>3</span>Off White</li>
+        </ol>
+
+        <!--Sorting-->
+        <div class="sorting">
+            <a href="">Latest</a>
+            <a href="">Rising</a>
+            <a href="">Popular</a>
+            <a href="">Commented</a>
         </div>
 
-        <section class="mosthyped">
-            <h3 class="show">Most Hyped</h3>
-            <hr>
+        <!--Artikels, zelfde als What To Read Next-->
+        <section class="whattoreadnext">
             <article>
-                <img src="images/weeknd.jpg" alt="The Weeknd with sunglasses outside.">
-                <a href="">
-                    <h2>The Weeknd Responds to 2021 Grammys Snub</h2>
-                </a>
-            </article>
-            <hr>
-            <article>
-                <img src="images/dave.jpg" alt="Dave Chappelle with a mic in his hands.">
-                <a href="">
-                    <h2>Netflix Has Removed 'Chappelle's Show' At Dave Chappelle's Request</h2>
-                </a>
-            </article>
-            <hr>
-            <article>
-                <img src="images/dunk.jpg" alt="The Nike SB Dunk low in collaboration with Frame Skate.">
-                <a href="">
-                    <h2>Official Look at the Frame Skate x Nike SB Dunk Low "Habibi"</h2>
-                </a>
-            </article>
-        </section>
-        <!--        </div>-->
-
-
-        <ul class="articlesort">
-            <li><a href="">Latest</a></li>
-            <li><a href="">Rising</a></li>
-            <li><a href="">Popular</a></li>
-            <li><a href="">Commented</a></li>
-        </ul>
-        <section class="whattoread">
-            <article>
-                <a href="artikel.html"><img src="images/sheckwes.jpg" alt="The cover for Sheck Wes his single BEENBALLIN"></a>
-                <aside>
-                    <p id="sectionartikel" class="dontshow">Music</p>
-                    <h2>Sheck Wes Releases New Track, "2020 DRAFT" #BEENBALLIN (UPDATE)</h2>
-                    <p>After revealing he is eligible for the 2020 NBA Draft.</p>
-                    <div class="artikeldata">
-                        <p>Music</p>
-                        <time datetime="2020-11-19">Nov, 19 2020</time>
-                        <div class="aantalbekeken">
-                            <i class="fab fa-hotjar fa-sm"></i>
-                            <p>23.9k</p>
-                        </div>
-                        <div class="aantalgereageerd">
-                            <i class="fas fa-comment fa-sm"></i>
-                            <p>7</p>
-                        </div>
-                    </div>
-                </aside>
+                <img src="images/travis.jpg" alt="">
+                <h3>Eliantte & Co. and Takashi Murakami Craft Travis Scott's Latest Chain</h3>
+                <p>Dubbed "Melted Utopia Dream."</p>
+                <!--Auteur pas zichtbaar bij bepaalde schermgroote-->
+                <!--<p>By</p><a href="" rel="author">Sophie Caraan</a>-->
+                <a href="">Entertainment</a>
+                <time>Jan 18, 2021</time>
+                <p><img src="" alt="">18.8k <span><img src="" alt="">8</span></p>
             </article>
 
-            <hr>
-
             <article>
-                <a href=""><img src="images/mask.jpg" alt="Woman wearing a anti-fog mask"></a>
-                <aside>
-                   <p id="sectionartikel" class="dontshow">Fashion</p>
-                    <h2>This Transparent Mask Is Designed With Anti-Fog Technology</h2>
-                    <p>Making communication more human, natural and accessible.</p>
-                    <div class="artikeldata">
-                        <p>Fashion</p>
-                        <time datetime="2020-11-19">Nov, 18 2020</time>
-                        <div class="aantalbekeken">
-                            <i class="fab fa-hotjar fa-sm"></i>
-                            <p>10.4k</p>
-                        </div>
-                        <div class="aantalgereageerd">
-                            <i class="fas fa-comment fa-sm"></i>
-                            <p>10</p>
-                        </div>
-                    </div>
-                </aside>
+                <img src="images/dunks.jpg" alt="">
+                <h3>Notre and Nike Deliver Community-Centric Dunk Highs in This Week's Best Footwear Drops</h3>
+                <p>Alongside the colorful adidas YEEZY BOOST 700 “Sun,” the food-focused Nike SB Dunk Low “Street Hawker,” the Patta x New Balance 991 and more.</p>
+                <!--Auteur pas zichtbaar bij bepaalde schermgroote-->
+                <p>By</p><a href="" rel="author">Ross Dwyer</a>
+                <time>Jan 19, 2021</time>
+                <p><img src="" alt="">2.9k <span><img src="" alt="">2</span></p>
             </article>
 
-            <hr>
+            <article>
+                <a href="">Entertainment</a>
+                <!--Ik twijfel nog h2 of h3, hij is namelijk even groot als de h2 maar is hetzelfde als de h3.-->
+                <h3>Ethan Hawke Reportedly Cast as Villain in Marvel and Disney+ Series 'Moon Knight'</h3>
+                <p>Supposedly starring opposite ‘Star Wars’ staple Oscar Isaac.</p>
+                <!--Auteur pas zichtbaar bij bepaalde schermgroote-->
+                <p>By</p><a href="" rel="author">Sophie Caraan</a>
+                <time>Jan 15, 2021</time>
+                <p>3.6k</p>
+                <p>3</p>
+            </article>
         </section>
     </main>
+
+    <footer></footer>
+
+
 
     <script src="scripts/script.js"></script>
 </body>
