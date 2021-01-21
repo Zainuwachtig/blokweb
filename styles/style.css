@@ -24,8 +24,16 @@ h5 {
     margin: 1em;
 }
 
+h2 {
+    margin: 0.66em;
+}
+
 a {
     text-decoration: none;
+}
+
+.dontshow {
+    display: none;
 }
 
 /*Header*/
@@ -48,12 +56,12 @@ header nav {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: pink;
-    transform:translatex(-100%);
+    background-color: white;
+    transform: translatex(-100%);
 }
 
 .toonmenu {
-      transform:translatex(0);
+    transform: translatex(0);
 }
 
 /*Voor de bovenkant van de header kleiner dan 61em*/
@@ -71,6 +79,7 @@ header nav a {
 
 header nav li {
     padding: 1em;
+    list-style-type: none;
 }
 
 .socialmediaicons {
@@ -96,15 +105,9 @@ input[type=submit] {
 
 /*Icons in de nav*/
 header nav div img:nth-last-of-type(1),
-header nav div img:nth-last-of-type(3), .socialmediaicons img {
+header nav div img:nth-last-of-type(3),
+.socialmediaicons img {
     width: 1.5em;
-}
-
-/*Ik heb hem als span, maar toch doet die als block element*/
-.iconsheader {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
 
 .iconsheader img {
@@ -116,6 +119,7 @@ header nav div img:nth-last-of-type(3), .socialmediaicons img {
     font-weight: 400;
     font-size: 1.1em;
     text-align: center;
+    margin: 0;
 }
 
 .artikelheading a {
@@ -136,6 +140,8 @@ header nav div img:nth-last-of-type(3), .socialmediaicons img {
     display: flex;
     overflow-x: auto;
     margin: 1em;
+    /*Dit is volgens mij nog niet helemaal de oplossing.*/
+    max-width: 750px;
 }
 
 .carousel img {
@@ -174,6 +180,8 @@ header nav div img:nth-last-of-type(3), .socialmediaicons img {
 
 .articletags {
     margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .articletags a {
@@ -184,6 +192,7 @@ header nav div img:nth-last-of-type(3), .socialmediaicons img {
     color: black;
     text-transform: uppercase;
     font-size: 0.7em;
+    margin: 0.5em 0.5em 0 0;
 }
 
 .articletags a:hover {
@@ -195,6 +204,7 @@ header nav div img:nth-last-of-type(3), .socialmediaicons img {
 .youmayalsolike {
     display: flex;
     overflow-x: auto;
+    margin: 1em;
 }
 
 .youmayalsolike article {
@@ -222,6 +232,11 @@ header nav div img:nth-last-of-type(3), .socialmediaicons img {
     width: 100%;
 }
 
+.whattoreadnext h3 {
+    font-size: 1.3em;
+    margin: 0.5em 0;
+}
+
 .whattoreadnext p,
 .whattoreadnext a,
 time {
@@ -229,16 +244,19 @@ time {
     text-decoration: none;
 }
 
-.whattoreadnext article p:last-child {
-    background-color: pink;
-    display: inline;
-    /*    Text-align, margin-right:auto werkt niet*/
-    text-align: right;
+.articlemetadata {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    font-size: 0.9em;
 }
 
-/*Artikel*/
 .rechterzijde {
     font-size: 0.9em;
+}
+
+.rechterzijde p img {
+    width: 1em;
 }
 
 /*Homepage*/
@@ -255,14 +273,12 @@ time {
     bottom: -1em;
     left: 50%;
     font-size: 1.3em;
-    background-color: pink;
     width: 95%;
     text-align: center;
     padding: 1em 0;
     /*https://stackoverflow.com/questions/8508275/how-to-center-a-position-absolute-element*/
     transform: translate(-50%, -50%);
 }
-
 
 .voorpaginaonder {
     display: flex;
@@ -339,9 +355,41 @@ ol li span {
 }
 
 
-
-
 @media (min-width:61em) {
+
+    /*Header*/
+    header {
+        display: flex;
+    }
+
+    /*Voor de iconen, die hoefte ik niet te gebruiken en a voor store, die staat namelijk ook in de ul.*/
+    .iconsheader,
+    header a:nth-child(2) {
+        display: none;
+    }
+
+    header nav {
+        transform: translatex(0);
+        position: static;
+    }
+
+    header {
+        margin: 0;
+        /*Wel padding, geen margin omdat anders de border bottom niet volledig zou zijn.*/
+        padding: 1em;
+        border-bottom: 1px solid #eee;
+    }
+
+    /*Deze is nu niet meer nodig, daarom display none;*/
+    header nav div:first-of-type {
+        display: none;
+    }
+
+    /*Om ze naast elkaar te positioneren.*/
+    header nav ul {
+        display: flex;
+    }
+
 
     /*Om de artikelen in een rij ipv column*/
     .voorpaginaflexbox {
@@ -351,32 +399,84 @@ ol li span {
     /*Voorpagina, middelste artikel*/
     .voorpagina {
         order: 2;
+        width: 50%;
+        /*Margin-top omdat anders de border lines elkaar zouden aanraken.*/
+        margin-top: 1em;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+    }
+
+    .voorpagina h3 {
+        font-size: 1.8em;
+        text-align: left;
+        bottom: 0;
     }
 
     /*2 kleinere artikelen, rechts.*/
     .voorpaginaonder {
         order: 3;
+        width: 25%;
     }
 
     .voorpaginaonder {
         flex-direction: column;
     }
 
+    .voorpaginaonder article {
+        width: 100%;
+    }
+
+    .voorpaginaonder article img {
+        width: 100%;
+    }
+
+    .voorpaginaonder article h3 {
+        font-size: 1.1em;
+    }
+
     /*Most Hyped, links*/
     .mosthyped {
         order: 1;
-    }
-
-    .mosthyped img {
-        width: 10%;
+        width: 25%;
     }
 
     #mosthypedtitel {
         display: none;
     }
 
+    .mosthyped article {
+        padding-bottom: 1em;
+        border-bottom: 1px solid #eee;
+    }
 
 
+    /*What To Read Next*/
+    .whattoreadnext article {
+        display: flex;
+    }
 
+    .whattoreadnext article img {
+        width: 35%;
+    }
+
+    .whattoreadnext article h3 {
+        font-size: 1.8em;
+    }
+
+    .rechterzijde {
+        margin-left: 2em;
+    }
+
+    .rechterzijde p {
+        font-size: 1.2em;
+    }
+
+    .rechterzijde p img {
+        width: 1em;
+    }
+
+    .articlemetadata {
+        display: block;
+    }
 
 }
