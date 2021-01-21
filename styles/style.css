@@ -15,12 +15,15 @@ h1 {
     margin: 0.8em 0;
 }
 
-h3 {
+h3,
+h4,
+.artikelheading a span {
     font-weight: 500;
 }
 
 h4,
-h5 {
+h5,
+header {
     margin: 1em;
 }
 
@@ -37,10 +40,6 @@ a {
 }
 
 /*Header*/
-header {
-    margin: 1em;
-}
-
 header img {
     width: 10em;
 }
@@ -130,10 +129,6 @@ header nav div img:nth-last-of-type(3),
     display: block;
     font-size: 0.8em;
     margin-top: 1em;
-}
-
-.artikelheading a span {
-    font-weight: 500;
 }
 
 .carousel {
@@ -300,9 +295,8 @@ time {
     text-align: center;
 }
 
-/*Most Hyped*/
-
-.mosthyped {
+.mosthyped,
+ol {
     margin: 1em;
 }
 
@@ -319,8 +313,8 @@ time {
 
 /*Brand Ranking*/
 ol {
-    margin: 1em;
     list-style: none;
+    display: flex;
 }
 
 /*Brand*/
@@ -329,6 +323,10 @@ ol li {
     font-weight: 500;
     display: flex;
     align-items: center;
+    padding: 0.5em;
+    /*Door die padding rechts is die lijn eronder langer, waar normaal de change en prev staan, wat nu niet hoefde.*/
+    padding-right: 5em;
+    border-bottom: 1px solid #EEE;
 }
 
 /*Position Brand*/
@@ -336,6 +334,16 @@ ol li span {
     color: #CCCCCC;
     font-size: 1.7em;
     margin-right: 1em;
+}
+
+.rankinglinks,
+.rankingrechts {
+    width: 100%;
+}
+
+.rankingrechts {
+    margin-left: 1em;
+    display: none;
 }
 
 /*Sorting*/
@@ -354,17 +362,36 @@ ol li span {
     border-bottom: 4px solid black;
 }
 
+footer {
+    background-color: black;
+}
+
+footer h4,
+footer a:hover {
+    color: white;
+}
+
+footer div,
+footer div > div {
+    display: flex;
+}
+
+footer div > div {
+    flex-direction: column;
+}
 
 @media (min-width:61em) {
 
-    /*Header*/
-    header {
+    header,
+    header nav ul,
+    .voorpaginaflexbox {
         display: flex;
     }
 
     /*Voor de iconen, die hoefte ik niet te gebruiken en a voor store, die staat namelijk ook in de ul.*/
     .iconsheader,
-    header a:nth-child(2) {
+    header a:nth-child(2),
+    header nav div:first-of-type {
         display: none;
     }
 
@@ -378,22 +405,6 @@ ol li span {
         /*Wel padding, geen margin omdat anders de border bottom niet volledig zou zijn.*/
         padding: 1em;
         border-bottom: 1px solid #eee;
-    }
-
-    /*Deze is nu niet meer nodig, daarom display none;*/
-    header nav div:first-of-type {
-        display: none;
-    }
-
-    /*Om ze naast elkaar te positioneren.*/
-    header nav ul {
-        display: flex;
-    }
-
-
-    /*Om de artikelen in een rij ipv column*/
-    .voorpaginaflexbox {
-        display: flex;
     }
 
     /*Voorpagina, middelste artikel*/
@@ -422,10 +433,7 @@ ol li span {
         flex-direction: column;
     }
 
-    .voorpaginaonder article {
-        width: 100%;
-    }
-
+    .voorpaginaonder article,
     .voorpaginaonder article img {
         width: 100%;
     }
@@ -449,6 +457,13 @@ ol li span {
         border-bottom: 1px solid #eee;
     }
 
+    /*Brand ranking*/
+    .rankinglinks,
+    .rankingrechts {
+        width: 50%;
+        display: block
+    }
+
 
     /*What To Read Next*/
     .whattoreadnext article {
@@ -461,6 +476,11 @@ ol li span {
 
     .whattoreadnext article h3 {
         font-size: 1.8em;
+        color: black;
+    }
+
+    .whattoreadnext article h3:hover {
+        opacity: 0.6;
     }
 
     .rechterzijde {
