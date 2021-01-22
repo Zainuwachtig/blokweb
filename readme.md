@@ -12,11 +12,19 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Herkansing (week 9)
 
 -dit ging goed & dit was lastig-
-Het begon allemaal wel goed, maar kwam op het laatst wel in de knoop met enkele dingen. Ik heb in de kerstvakantie er tijd in gestopt maar met de motivatieproblemen die ik had heb ik niet kunnen realiseren wat het zou moeten zijn. Ook het zo min mogelijk gebruiken van classes en id is niet helemaal gelukt, ik vond met pseudoclasses werken ook niet bepaald praktischer.
+Voor de herkansing heb ik de hele code omgegooid en ben ik helemaal opnieuw begonnen, dit keer ging het allemaal beter en werd het niet zo'n zooitje. Ik heb het werk ook beter verdeeld en ben met vragen naar Janno toe gegaan, wat me erg heeft geholpen. Wel heb ik sommige dingen niet zo gemaakt als op de echte website, dat omdat zij het op een "vieze" manier deden. Bijvoorbeeld de comment section heb ik niet gemaakt en de header is niet zoals op de echte site, want daar werd ook gewerkt met javascript. Voor de rest is alles wel in grote lijnen hetzelfde.
 
 **Screenshot(s):**
 
--screenshot(s) van je eindresultaat-
+![De homepage met het grote artikel.](screenshots/home1.png)
+![De homepage met twee kleinere artikels en de most hyped.](screenshots/home4.png)
+![De brandranking](images/home3.png)
+![De overige artikelen die je kan lezen](images/home2.png)
+
+![De bovenkant van het artikel](screenshots/artikel1.png)
+![De onderkant van het artikel](screenshots/artikel2.png)
+
+![De footer van de website.](screenshots/footer.png)
 
 
 ## Eindgesprek (week 7/8)
