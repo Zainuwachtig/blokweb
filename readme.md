@@ -18,8 +18,8 @@ Voor de herkansing heb ik de hele code omgegooid en ben ik helemaal opnieuw bego
 
 ![De homepage met het grote artikel.](screenshots/home1.png)
 ![De homepage met twee kleinere artikels en de most hyped.](screenshots/home4.png)
-![De brandranking](images/home3.png)
-![De overige artikelen die je kan lezen](images/home2.png)
+![De brandranking](screenshots/home3.png)
+![De overige artikelen die je kan lezen](screenshots/home2.png)
 
 ![De bovenkant van het artikel](screenshots/artikel1.png)
 ![De onderkant van het artikel](screenshots/artikel2.png)
