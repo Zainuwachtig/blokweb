@@ -39,13 +39,20 @@ a {
     display: none;
 }
 
-header nav div:first-of-type {
+header nav div:first-of-type,
+header {
     display: flex;
 }
 
 /*Header*/
 header img {
     width: 10em;
+}
+
+header {
+    padding: 1em;
+    border-bottom: 1px solid #eee;
+    margin: 0;
 }
 
 header a {
@@ -118,6 +125,11 @@ header nav div img:nth-last-of-type(3),
     width: 1.5em;
 }
 
+.iconsheader {
+    /*Zodat de iconen naar de buitenkant worden geduwd.*/
+    margin-left: auto;
+}
+
 .artikelheading h2 {
     color: #888888;
     font-weight: 400;
@@ -141,7 +153,7 @@ header nav div img:nth-last-of-type(3),
     overflow-x: auto;
     margin: 1em;
     /*Dit is volgens mij nog niet helemaal de oplossing.*/
-    max-width: 750px;
+    max-width: 800px;
 }
 
 .carousel img {
@@ -152,6 +164,11 @@ header nav div img:nth-last-of-type(3),
     display: flex;
     font-size: 0.8em;
     color: #888888;
+    margin: 1em;
+}
+
+.metadata p img {
+    width: 1em;
 }
 
 .artikeltekst p {
@@ -370,6 +387,9 @@ ol li span {
     color: black;
     text-decoration: none;
     padding: 1em 1em;
+/*Flex-grow, zodat ze de hele breedte consumeren en die text-align om hem in het midden te krijgen.*/
+    flex-grow: 1;
+    text-align: center;
 }
 
 .sorting a:hover {
@@ -391,7 +411,7 @@ footer div > div {
 }
 
 footer div {
-    width: 60%;
+    width: 70%;
     margin: 1em;
 }
 
@@ -437,13 +457,6 @@ footer h4:nth-last-of-type(2) {
 
     header nav ul li:hover {
         opacity: 0.6;
-    }
-
-    header {
-        margin: 0;
-        /*Wel padding, geen margin omdat anders de border bottom niet volledig zou zijn.*/
-        padding: 1em;
-        border-bottom: 1px solid #eee;
     }
 
     .artikelflexbox {
@@ -558,6 +571,8 @@ footer h4:nth-last-of-type(2) {
         display: flex;
         flex-direction: column;
         font-size: 1em;
-        margin: 1em;
+        height: 8em;
+        justify-content: space-around;
     }
+
 }
